@@ -3,137 +3,112 @@
     padding: 0px;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
-  }
-.bd {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    background: url(../img/b.jpg) no-repeat;
-    background-size: cover;
-    background-position: center;
 }
 
-.plus{
-    position: fixed;
-    top: 0;
-    left: 50%;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 500px 550px;
-    z-index: 99;
-}
-.plus button{
-    height: 50px;
-    background: transparent;
-    border: 0px solid rgb(252, 252, 252);
-    border-radius: 50px;
-    backdrop-filter: blur(20px);
-    box-shadow: 0 0 px rgba(0, 0, 0, .5);
-    transition: .3s;
-}
-.plus button:hover{
-    background-color: black;
-}
 .ct{
-    position: absolute;
-    top: 55%;
-    left: 50%;
     width: 100%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%,-50%);
     padding: 0 10px;
     text-align: center;
-    /* width: 410px;
-    height: 130px;
-    background: transparent;
-    border: 3px solid rgba(255,255,255,1);
-    border-radius: 10px;
-   backdrop-filter: blur(10px);
-   box-shadow: 0 0 30px rgba(0, 0, 0, .5);  */
-}  
- .title{
-    color: #ffffff;
+}
+.title{
+    color: #b33939;
     font-size: 40px;
-    font-weight: 600;
+    width:100%;
     text-transform: uppercase;
+    text-align: center;
 }
-.ct button{
-    margin-top: 20px;
-    background: none;
+.open{
+    background-color: #fff;
     border: none;
+    border-radius: 50%;
+    height: 50px;
 }
-.ct .btn{
-    display: inline-block;
-    border: 1px solid #ffffff;
-    padding: 10px 30px;
-    margin: 0 10px;
-    color: #ffffff;
-    font-size: 18px;
-    font-weight: 600;
-    transition: all 0.2s ease;
+.open:hover{
+    background:rgb(255, 255, 3);
+    cursor: pointer;
 }
-.ct .btn:hover{
-    background: rgb(255, 255, 3);
-    color: rgb(66, 38, 38);
+.form{
+    left: 500%;
 }
-
 .wrapper{
-    top:50%;
-    left:50%;
-    transform: translate(-50%, -10%);  
-    position: relative;
-    width: 600px;
-    height: 500px;
+    width: 500px;
+    margin-left: 60%;
+    margin-top: 20%;
+    /* z-index:41; */
+    padding:30px;
     background: transparent;
-    border: 3px solid rgb(255, 255, 255,1);
+    border: 3px solid #b33939;
     border-radius: 30px;
     backdrop-filter: blur(20px);
-    box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
-}
-.conseil h2{
-    font-size: 2em;
-    color: rgb(255, 255, 255);
-    text-align: center;
-    margin: 35px 0;
+    -webkit-box-shadow:0 0 10px rgba(0,0,0,0.4);
+    -moz-box-shadow:0 0 10px rgba(0,0,0,0.4); 
+    box-shadow:0 0 10px rgba(0,0,0,0.4)  
 }
 .item{
-    position: relative;
+    color: #b33939;
     width: 100%;
     height: 25px;
     margin: 2px 35px;
 }
 .item label{
     position: absolute;
-    top: 50%;
-    left: 5px;
-    transform: translateY(-50%);
-    font-size: 1em;
-    color: rgb(255, 254, 254);
+    left: 8px;
+    
 }
 .item input{
     width: 50%;
     height: 90%;
-    border-radius: 5px;
-    transform: translate(20%); 
-} 
-.close {
+    border-radius: 4px;
+    transform: translate(60%); 
+}
+.close{
     position: absolute;
     top: 0;
     right: 0;
-    width: 45px;
-    height: 45px;
-    background: #ffffff;
-    font-size: 1.5em;
+    width: 30px;
+    height: 30px;
+    background: #b33939;
+    font-size: 1em;
     display: flex;
     justify-content: center;
     align-items: center;
-    border-top-right-radius: 18px;
-    border-bottom-left-radius: 18px;
-    cursor: pointer;
-    z-index: 1;
-  }
-
+    border-top-right-radius: 24px;
+    border-bottom-left-radius: 15px;
+}
+.close:hover{
+    color:#b33939;
+   background:#ffffff;
+}
+.conseil h2{
+    font-size: 2em;
+    color:#b33939;
+    text-align: center;
+    margin: 30px 20px;
+} 
+.bt{
+    text-align: center;
+}
+.bt button{
+    margin-top: 20px;
+    background: none;
+    border: none;
+    right: 50%;
+}
+.bt .btn{
+    display: inline-block;
+    border: 1px solid #b33939;
+    border-radius: 6px;
+    padding: 10px 15px;
+    margin: 0 10px;
+    color: #2C3A47;
+    background: #b33939;
+    font-size: 18px;
+    font-weight: 600;
+    transition: all 0.2s ease;
+}
+.bt .btn:hover{
+    color:#fff;
+} 
 
 

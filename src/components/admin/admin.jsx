@@ -1,31 +1,42 @@
-import React from 'react'
+import React, { useRef, useState } from 'react'
 import './admin.css'
-import { useNavigate } from 'react-router-dom'
+import {Button, Overlay} from 'react-bootstrap'
 import {BsPlusCircle} from 'react-icons/bs'
 import {AiOutlineClose} from 'react-icons/ai'
 
 const Admin = () => {
+  const [show, setShow] = useState(false);
+  const target = useRef(null);
     return (
     <div className='bd'>
-        <div className='ct'>
         <div className='title'>Trại Ong Vui Vẻ</div>
-        <button>
+        {/* <button>
           <div className='btn'>Flower</div>
           <div className='btn'>Map</div>
-        </button>
-        <h2 className='plus'>
-            <button>
-             <BsPlusCircle 
+        </button> */}
+        <Button variant="danger" ref={target} onClick={() => setShow(!show)} className='open'>
+        <BsPlusCircle 
               size={50}
-              color='#ffffff'
+              color='#b33939'
             />
-            </button>
-        </h2>   
-        <div className='wrapper'>
-         <div className='close'>
+        </Button>
+        <Overlay target={target.current} show={show} placement="right" >
+        {({
+          placement: _placement,
+          arrowProps: _arrowProps,
+          show: _show,
+          popper: _popper,
+          hasDoneInitialMeasure: _hasDoneInitialMeasure,
+          ...props
+        }) => (
+          <div className="form"
+            {...props} 
+          >
+              <div className='wrapper'>
+         <button className='close' onClick={()=> setShow(!show)}>
           <AiOutlineClose
           />
-         </div>
+         </button>
           <div className='conseil'>
             <h2>Phấn hoa</h2>
             <form action='#'>
@@ -77,12 +88,17 @@ const Admin = () => {
                 <input type='other structure features'/>
                 <label>Other structure features</label>
               </div>
+              <div className='bt'>
                <button type='submit' className='btn'> Submit</button>
+              </div>
             </form>
           </div>
         </div> 
+          </div>
+        )}
+      </Overlay>
+      
          
-      </div>
     </div>
 
     )
